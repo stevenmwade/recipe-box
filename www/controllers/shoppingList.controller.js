@@ -8,7 +8,8 @@
 	ShoppingListCtrl.$inject = ['$scope'];
 
 	function ShoppingListCtrl($scope) {
-		
+		$scope.shouldShowReorder = false;
+		$scope.shoppingList = ['milk', 'juice'];
 	}
 
 })();

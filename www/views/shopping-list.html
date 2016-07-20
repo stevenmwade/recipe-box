@@ -1,5 +1,16 @@
 <ion-view view-title="Shopping List">
   <ion-content class="padding">
-    <h2>I am a shopping list</h2>
+    <ion-list show-reorder="shouldShowReorder">
+      <ion-item ng-repeat="item in shoppingList"
+                class="item">
+
+        {{item}}
+
+        <ion-reorder-button class="ion-navicon"
+                            on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+        </ion-reorder-button>
+
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
